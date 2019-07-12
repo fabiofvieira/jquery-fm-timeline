@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+.boxes {
+  position: relative;
+  display: flex;
+}
+.boxes > div {
+  flex: 1;
+  padding: 30px 50px;
+  width: 50%;
+}
+.box-container > div {
+  position: relative;
+}
+.box-container .timeline-content {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 10px;
+  position: relative;
+}
+.box-direita .time-date  { right: auto; left: -75px }
+.time-date {
+  width: 50px;
+  top: -5px;
+    height: 50px;
+    position: absolute;
+    background: grey;
+    right: -75px;
+    padding: 10px;
+    border-radius: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+}
+.box-container .timeline-content::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  background: red;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -8px;
+  top: 10px;
+  z-index: -1;
+}
+.box-direita .box-container .timeline-content::after {
+  right: auto;
+  left: -8px;
+}
+.box-container > div img {
+  max-width: 100%;
+}
+.boxes::after {
+  content: "";
+  display: block;
+  left: 50%;
+  width: 5px;
+  background: red;
+  height: 100%;
+  margin-left: -2.5px;
+  position: absolute;
+}
